@@ -24,7 +24,7 @@ def index(request):
 def add(request):
     if request.method == "POST":
         response_data = {"status": "ok"}
-
+        logger.info("got request body: " + str(request.body))
         data = json.loads(request.body)
         try:
             usname = data["user"]
