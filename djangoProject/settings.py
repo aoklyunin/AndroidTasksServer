@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-azm(d2yt5c@gc@_0m1v2=gjb70w536j#p6i_mm*cyqms##oab@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["buran-it-sch.herokuapp.com", "http://127.0.0.1/"]
 
 # Application definition
 
@@ -126,7 +126,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
 
 LOGGING = {
     'version': 1,
