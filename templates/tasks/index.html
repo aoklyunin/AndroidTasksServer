@@ -4,13 +4,42 @@
 {% block title %}Объявления{% endblock %}
 
 {% block content %}
-  <h1>Объявления</h1>
-      <p style="color:red"> Новый адрес сайта: https://sch.buran.rest </p><br>
-      <p style="color:red"> В личном кабинете добавлена ссылка на книги</p>
-      <p class="font-weight-bold" >
-          Система тестирования: <a href="http://mdl.sch239.net">http://mdl.sch239.net</a><br>
-          Почта: sch@buran.rest<br>
-          Телеграм:  <a href="https://t.me/sch239">@sch239</a><br>
-          Github:  <a href="https://github.com/sch239">https://github.com/sch239</a><br>
-      </p>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Автор</th>
+                        <th>Заголовок</th>
+                        <th>Текст</th>
+                        <th>Выполнено</th>
+                    </tr>
+                    </thead>
+                    {% for t in tasks %}
+                        <tr>
+                            <td align="center">{{ t.author }}</td>
+                            <td align="center">{{ t.title }}</td>
+                            <td align="center">{{ t.text }}</td>
+                            <td align="center">{% if t.solved %}
+                                <p class="btn btn-primary">
+                                    Да
+                                </p>
+                            {% else %}
+                                <p class="btn btn-info">
+                                    Нет
+                                </p>
+
+                            {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="col">
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
