@@ -44,7 +44,7 @@ def add(request):
                     response_data = {"status": "bad task json: " + str(e)}
         except Exception as e:
             logger.info("bad json: " + str(e))
-            response_data = {"status": "bad json: " + str(e)}
+            response_data = {"status": "bad json: " + str(request.body)}
     else:
         response_data = {"status": "not post request"}
 
