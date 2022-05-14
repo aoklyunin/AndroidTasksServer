@@ -31,3 +31,6 @@ d = {
 res = requests.post("https://buran-it-sch.herokuapp.com/add", json=d)
 print(res.content)
 ```
+
+Все задачи, принадлежащие пользователю, имя которого получено по ключу "user", удаляются, после 
+чего добавляются все, указанные в POST-запросе
